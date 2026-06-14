@@ -518,6 +518,16 @@ spec:
       optional: true
   taskRunTemplate:
     serviceAccountName: build-pipeline-testrepo-e6d9f
+    podTemplate:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: feature.node.kubernetes.io/cpu-cpuid.AVX2
+                operator: In
+                values:
+                - "true"
   workspaces:
   - name: git-auth
     secret:
