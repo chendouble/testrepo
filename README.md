@@ -1,5 +1,7 @@
 # Example component for testing Konflux
 
+testing...
+
 This component can be used for testing Konflux—especially on a local setup (for example when
 [running on Kind](https://github.com/konflux-ci/konflux-ci?tab=readme-ov-file#konflux-ci)).
 
